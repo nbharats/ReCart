@@ -101,22 +101,6 @@ function Cart() {
                 </div>
 
                 <div className="col-lg-4">
-                    <form className="mb-30">
-                        <div className="input-group">
-                            <input
-                                type="text"
-                                className="form-control border-0 p-4"
-                                placeholder="Coupon Code"
-                            />
-                            <button
-                                className="btn btn-info"
-                                type="submit"
-                            >
-                                Apply Coupon
-                            </button>
-                        </div>
-                    </form>
-
                     <h5 className="section-title position-relative text-uppercase mb-3">
                         <span className="bg-secondary pe-3">Cart Summary</span>
                     </h5>

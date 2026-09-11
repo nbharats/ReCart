@@ -20,7 +20,7 @@ function OrderSuccess() {
     const fetchOrder = async () => {
             try {
                 const response = await axios.get(
-                    `http://127.0.0.1:5000/api/orders/${orderId}`,
+                    `${import.meta.env.VITE_API_URL}/api/orders/${orderId}`,
                     {
                         headers: {
                             Authorization: `Bearer ${token}`
@@ -46,6 +46,7 @@ function OrderSuccess() {
         return (
             <div className="container mt-5">
                 <h4>No recent order found.</h4>
+                <small className="text-secondary">If orders are placed, please wait for a minute for backend.</small>
             </div>
         );
     }

@@ -19,7 +19,7 @@ function Orders() {
         const fetchOrder = async () => {
             try{
                 const response = await axios.get(
-                    `http://127.0.0.1:5000/api/orders`, 
+                    `${import.meta.env.VITE_API_URL}/api/orders`, 
                     { 
                         headers: {
                              Authorization: `Bearer ${token}` 
@@ -43,7 +43,7 @@ function Orders() {
 
         try { 
             const response = await axios.put( 
-                `http://127.0.0.1:5000/api/orders/${orderId}/cancel`, 
+                `${import.meta.env.VITE_API_URL}/api/orders/${orderId}/cancel`, 
                 {}, 
                 { 
                     headers: { 
@@ -96,6 +96,7 @@ function Orders() {
                             <p className="mb-0">
                                 Your completed orders will appear here.
                             </p>
+                            <small className="text-secondary">If orders are placed, please wait for a minute for backend.</small>
                         </div>
 
                     ) : (

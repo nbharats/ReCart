@@ -34,7 +34,7 @@ export const CartProvider = ({children}) => {
         const fetchWishlist = async () => {
             try {
                 const response = await axios.get(
-                    "http://127.0.0.1:5000/api/wishlist",
+                    `${import.meta.env.VITE_API_URL}/api/wishlist`,
                     {
                         headers: {
                             Authorization: `Bearer ${token}`
@@ -176,7 +176,7 @@ export const CartProvider = ({children}) => {
 
         try {
             const response = await axios.post(
-                "http://127.0.0.1:5000/api/wishlist",
+                `${import.meta.env.VITE_API_URL}/api/wishlist`,
                 {
                     product_id: product.id
                 },
@@ -227,7 +227,7 @@ export const CartProvider = ({children}) => {
 
         try {
             const response = await axios.delete(
-                `http://127.0.0.1:5000/api/wishlist/${id}`,
+                `${import.meta.env.VITE_API_URL}/api/wishlist/${id}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
