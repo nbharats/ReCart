@@ -12,11 +12,9 @@ ReCart provides a complete shopping experience with user authentication, product
 https://re-cart-gilt.vercel.app/
 
 **Backend API:**  
-`https://YOUR-RENDER-BACKEND-URL.onrender.com/`
+https://recart-backend-kuem.onrender.com/
 
 **Database:** TiDB Cloud
-
-> Replace `YOUR-RENDER-BACKEND-URL` with your actual Render backend URL.
 
 ---
 
